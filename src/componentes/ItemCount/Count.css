@@ -1,0 +1,38 @@
+.Itemcount{
+    display: grid;
+    justify-content: center;
+    margin: 60px;
+    
+ 
+}
+.Itemcount div {
+    border: 2px solid black;
+    margin: 10px 0px;
+
+}
+
+
+.removeButton{
+    
+    padding: 0px 20px;
+}
+
+.addButton{
+   
+    padding: 0px 20px;
+}
+
+.count{
+   
+    padding: 0px 20px;
+}
+
+
+.addCarrito {
+    border: 2px solid black;
+}
+
+
+
+
+

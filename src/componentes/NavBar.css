@@ -1,0 +1,50 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+   
+    
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Cinzel&family=Montserrat:ital,wght@1,100;1,300&family=Poppins:wght@300;400;600;700&family=Short+Stack&display=swap');
+
+.estilos {
+
+    border: 2px solid black;
+    font-family: 'Montserrat', sans-seriff;
+    font-weight: 500 ;
+    
+    
+}
+
+.header{
+    background-image: url(/public/logo192.png);
+}
+
+.nav-container{
+    
+    background-color: ivory;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 20px;
+    
+   
+
+}
+
+.nav__items {
+    display: inline;
+    padding: 0px 60px;
+}
+
+
+.btn btn-ghost btn-circle {
+    
+    padding: 0;
+}
+
+
+
+
+
