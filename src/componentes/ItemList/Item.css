@@ -1,0 +1,23 @@
+.card-container{
+    
+    margin-top: 40px;
+    background-color: ivory;
+    border-radius: 2px;
+    border: .7px solid black;
+   
+}
+
+
+.card-container img{
+   width: 400px;
+   height: 400px;
+   padding: 20px;
+}
+
+
+
+.ItemCount{
+       display: grid;
+       grid-template-columns: 1fr;
+    
+}

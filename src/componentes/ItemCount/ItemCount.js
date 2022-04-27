@@ -19,7 +19,6 @@ const ItemCount = ({onAdd}) => {
 
   const addHandler = () => {
     console.log("se esta sumando");
-    
     setCount(count + 1);
   };
   const removeHandler = () => {

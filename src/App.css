@@ -1,0 +1,9 @@
+.container-app{
+   /*  background-image: url(./assets/tejidoniño.jpeg); */
+    /* background-color: rgb(162, 241, 244); */
+    background-size: cover;
+    opacity: 0.9;
+   height: absolute;
+    min-width: 100vw;
+    
+}
