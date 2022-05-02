@@ -11,11 +11,12 @@ const ItemList = (props) => {
     <div className="product-list-container">
       
 
-        {props.items.map((item) => { 
-        // genero array de componentes item
+        {props.items.map((itm) => {   
+        // rendereo array de componentes item para cada uno de los elementos que llamamos itm
           return (
-             <div className='card-container1'>
-            <Item producto={item}/>
+             <div className='card-container1'>     
+            <Item producto={itm} key={itm.id}/>
+           
             </div>
           ) 
            

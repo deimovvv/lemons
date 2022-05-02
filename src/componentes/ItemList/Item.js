@@ -6,18 +6,20 @@ import "./Item.css";
 const Item = ({producto}) => {
   console.log(producto);
 
+  // prop que se llama producto que va a tener todos los datos de la pelicula
 
-  const onAdd = (count) => {
-    alert(`Agregaste ${count} productos`);
-  };
+
+
 
   return (
   <div className='card-container'>
+    <div className='item-container'>
     <h2> {producto.name} </h2>
     <img src={producto.img}/> 
     <h3> {producto.stock}</h3>
     <div classname={ItemCount}>
-    <ItemCount  onAdd={onAdd} />
+   
+    </div>
     </div>
     
 

@@ -16,8 +16,8 @@ const ItemListContainer = () => {
    const [productos, setProductos] = useState([]) 
    // creo el variable con clase promise con un setTimeout de 2 segundos que devuelve array de productos en el parametro resolve
    useEffect(() => {
-      getsProductsPromise
-           .then(arrayp => setProductos(arrayp))
+      getsProductsPromise      // en setProductos pasamos la data del array al state despues que se resuelve la promesa
+           .then(arrayp => setProductos(arrayp)) // en arrayp obtenemos la respuesta de lo que ingresamos en el res, y lo que ingresamos en res es el arrayProductos
            .catch(err =>   console.log(err) )
          
 
