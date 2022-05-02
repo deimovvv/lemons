@@ -8,8 +8,8 @@ const ItemDetailContainer = () => {
 
 
     useEffect(() => {
-        getDetailPromise
-        .then(data => setDetail(data))
+        getDetailPromise      
+        .then(data => setDetail(data[0])) 
         .catch(err =>   console.log(err) )
         
     },[])

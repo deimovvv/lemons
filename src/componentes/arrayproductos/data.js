@@ -3,10 +3,10 @@
 export const arrayProductos = [
     {
         name: 'Buzo',
-        price: '1000',
+        price: '$1000',
         img: 'https://http2.mlstatic.com/D_NQ_NP_929032-MLA26774950524_022018-O.jpg',
         stock: 5,
-        description: 'ASNDAJSDJASJKMADSKMDKASASD',
+        description: 'Buzo de lana',
         talle: 1,
         id: 1,
     },

@@ -1,0 +1,30 @@
+.detail-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: ivory;
+    justify-content: space-evenly;
+    
+    width: 900px;
+    
+}
+
+.detail-container img{
+    width: 400px;
+    padding: 20px 20px;
+    
+}
+
+
+
+.data-container h1{
+    padding: 20px;
+}   
+
+.data-container p{
+    padding: 20px;
+}
+
+
+.itemcount{
+    background-color: black !important;
+}

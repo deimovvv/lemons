@@ -11,8 +11,10 @@ function App() {
   return (
 
   /*   <BrowserRouter>  */
-    <div className='container-app'>
+  <>  
     <NavBar/>
+
+    <div className='container-app'>
     <ItemListContainer/>
     <ItemDetailContainer/>
     
@@ -21,6 +23,7 @@ function App() {
    
      
     </div>
+    </>
    /*  </BrowserRouter> */
    
     
