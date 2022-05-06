@@ -2,8 +2,9 @@
     
     margin-top: 40px;
     background-color: ivory;
-    border-radius: 2px;
-    border: .7px solid black;
+    border: 1px solid ivory;
+    
+    
   
 }
 
@@ -15,6 +16,15 @@
      flex-wrap: wrap;
      padding: 10px 0px;
 
+}
+
+.item-container button {
+    background-color: #beb0a7;
+    /* border: 1px solid black; */
+    border: 1px solid ivory;
+    color: ivory;
+    border-radius: 8px;
+    padding: 5px 20px;
 }
 
 .card-container img{
@@ -29,4 +39,10 @@
        display: grid;
        grid-template-columns: 1fr;
     
+}
+
+
+.button-comprar {
+    text-decoration: none;
+    color: ivory;
 }

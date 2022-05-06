@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 import Logo from '../../assets/lemonslogo.png'
 import "./NavBar.css";
+import { Link } from 'react-router-dom'
 
 
 const NavBar = () => {
@@ -25,24 +26,28 @@ const NavBar = () => {
      {/* links de navegación */}
       <ul className="nav__link nav__link--menu">
         <li className="nav__items">
-          <a href="Inicio" className="nav__links">
-            Inicio
-          </a>
+          <Link to={'/'}> Inicio</Link>
+          
         </li>
         <li className="nav__items">
-          <a href="tejidos" className="nav__links">
-            Tejidos
-          </a>
+          <Link to={'/items'}> Catalogo</Link>
+          
         </li>
         <li className="nav__items">
-          <a href="contacto" className="nav__links">
-            Otras Temporadas
-          </a>
+           <Link to={'/category/otoño'}>Otoño</Link>
+            
+          
         </li>
         <li className="nav__items">
-          <a href="contacto" className="nav__links">
-            Contacto
-          </a>
+          <Link to={'/category/verano'}>Verano</Link>
+            
+          
+        </li>
+        <li className="nav__items">
+        <Link to={'/category/invierno'}> Invierno</Link>
+          
+            
+          
         </li>
       </ul>
      
