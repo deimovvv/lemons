@@ -1,6 +1,6 @@
 import React from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBars } from '@fortawesome/free-solid-svg-icons';
+import {  facartshopping } from '@fortawesome/free-solid-svg-icons';
 import Logo from '../../assets/lemonslogo.png'
 import "./NavBar.css";
 import { Link } from 'react-router-dom'
@@ -56,7 +56,11 @@ const NavBar = () => {
         <label tabindex="0" className="btn btn-ghost btn-circle" >
         <div className="indicator">
          
-          <span className="badge badge-sm indicator-item">5</span>
+        
+ 
+ 
+         
+         
 
         </div>
         </label>

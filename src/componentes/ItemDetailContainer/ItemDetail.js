@@ -1,9 +1,9 @@
-import React from 'react'
+import  { useState } from 'react'
 import ItemCount from '../ItemCount/ItemCount'
 import { arrayProductos } from "../arrayproductos/data.js";
 import './ItemDetail.css'
 /* import { useParams } from 'react-router-dom'; */
-/* import React, { useEffect, useState } from 'react' */
+/* import { useState } from 'react' */ 
 
 
 const ItemDetail = (props) => {
@@ -11,6 +11,7 @@ const ItemDetail = (props) => {
     const {name,id, description,talle,price, img} = props.item
 console.log(props);
    
+        const [count, setCount] = useState(true)
 
     const onAdd = (count) => {
         alert(`Agregaste ${count} productos`);
@@ -32,6 +33,8 @@ console.log(props);
     
     </div>
     <div className='Itemcount-container'> 
+    {count ? <strong>verdadero</strong> : <strong>falso</strong>}
+    { count && <strong> Se renderea </strong>}
     <ItemCount className='itemcount'  onAdd={onAdd} />
     </div>
     </div>
