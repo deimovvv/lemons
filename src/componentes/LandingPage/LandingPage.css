@@ -1,11 +1,48 @@
 .container-landing {
     margin: 0px;
-    padding: 40px;
-    /* background-color: rgb(218, 248, 249) */;
-     background-image: url(../../assets/tejidoniño.jpeg);
+    padding-bottom: 100px;
+   
+    background: rgb(117,36,94);
+    background: rgb(227,231,237);
+background: linear-gradient(0deg, rgba(227,231,237,1) 0%, rgba(178,144,173,1) 1%, rgba(157,107,146,1) 4%, rgba(143,82,128,1) 7%, rgba(134,67,117,1) 29%, rgba(117,36,94,1) 76%);
+   
+   display: grid;
+   
+   justify-content: center;
+   justify-items: center;
+   grid-auto-rows: max-content;
+   align-content: center;
+   align-items: center;
+   gap: 4em;
+    
+
+     /* background-image: url(../../assets/tejidoniño2.jpg); */
+     
      min-width: 100vw;
      height: 100vh;
      background-size: cover;
     
 
 }
+
+
+.container-landing h1{
+    font-size: 50px;
+    font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: #E3E7ED;
+}
+
+
+
+
+
+.container-landing button{
+   
+    
+    background-color: #E3E7ED;
+    padding: 20px;
+    border: 4px solid #E3E7ED;
+    border-radius: 20px;
+    cursor: pointer;
+    
+} 

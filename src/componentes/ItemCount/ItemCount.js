@@ -1,3 +1,4 @@
+import { counter } from "@fortawesome/fontawesome-svg-core";
 import { useEffect, useState } from "react";
 import "./Count.css";
 
@@ -26,6 +27,10 @@ const ItemCount = ({onAdd}) => {
     if (count > 1) setCount(count - 1);
   };
 
+  const addToCart = () => {
+    onAdd(count)
+  }
+
   return (
     <>
       <div className="Itemcount">
@@ -41,7 +46,7 @@ const ItemCount = ({onAdd}) => {
           +{" "}
         </button>
         </div>
-        <button className='addCarrito' onClick={() => onAdd(count)}> Agregar al carrito </button>
+        <button className='addCarrito' onClick={addToCart}> Agregar al carrito </button>
       </div>
     </>
   );

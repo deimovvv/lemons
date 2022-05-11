@@ -12,8 +12,9 @@
     width: 100%; */
     margin: 0px;
     padding: 40px;
-    /* background-color: rgb(218, 248, 249) */;
-     background-image: url(../../assets/tejidoniño.jpeg);
+    background-color: #75245E;
+    
+     /* background-image: url(../../assets/tejidoniño.jpeg); */
      min-width: 100vw;
    
 
@@ -22,8 +23,9 @@
 .container h1{
     margin: 20px;
     font-size: 30px;
-    font-weight: 100;
+    font-weight: 200;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: white;
     
 
 }
