@@ -38,7 +38,7 @@ export const arrayProductos = [
         stock: 5,
         talle: '3',
         category: 'invierno',
-        id: 3
+        id: 4
     },
     {
         name: 'Sueter',
@@ -47,7 +47,7 @@ export const arrayProductos = [
         stock: 5,
         talle: 'Talle: 6-12m',
         category: 'otoño',
-        id: 3
+        id: 5
     },
     {
         name: 'Conjunto para bebe',
@@ -56,6 +56,7 @@ export const arrayProductos = [
         stock: 5,
         talle: 'Talle: 3',
         category: 'verano',
-        id: 3
+        id: 6
     },
+    
 ];

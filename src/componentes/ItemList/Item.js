@@ -5,8 +5,6 @@ import { Link } from 'react-router-dom'
 import "./Item.css";
 
 const Item = ({producto}) => {
-  console.log(producto);
-
   // prop que se llama producto que va a tener todos los datos de la pelicula
 
 
@@ -19,7 +17,7 @@ const Item = ({producto}) => {
     <img src={producto.img}/> 
     <button> <Link  className='button-comprar'  to={`/item/${producto.id}`}> Comprar </Link>   </button>
     {/* <h3> {producto.stock}</h3> */}
-    <div classname={ItemCount}>
+    <div className={ItemCount}>
    
     </div>
     </div>

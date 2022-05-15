@@ -5,7 +5,7 @@ import Item from "./Item";
 import './ItemList.css'
 
 const ItemList = (props) => {
-  console.log(props.items);
+  
 
   return (
     <div className="product-list-container">

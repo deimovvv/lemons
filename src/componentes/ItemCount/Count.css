@@ -62,7 +62,8 @@
     background-color: #75245E;
     transition: background-color 1s ease ;
     outline: 0;
-    color: #E3E7ED
+    color: #E3E7ED;
+    cursor: pointer;
 }
 
 

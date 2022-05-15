@@ -3,6 +3,7 @@ import ItemCount from "../ItemCount/ItemCount";
 import { arrayProductos } from "../arrayproductos/data.js";
 import "./ItemDetail.css";
 import { CartContext } from "../context/CartContext";
+import { Link } from 'react-router-dom'
 /* import { useParams } from 'react-router-dom'; */
 
 
@@ -12,15 +13,17 @@ const ItemDetail = (props) => {
   // useContext es un hook react para traer contexto
   const { addToCart } = useContext(CartContext);
 
-  console.log(addToCart);
-
-  const [count, setCount] = useState(true);
-
-  const onAdd = (count) => {
-    addToCart(props.item, count)
-  };
-
   
+
+    
+
+ 
+  const [purchaseCompleted, setPurchaseCompleted] = useState(false) // estado que indica si el usuario hizo la compra o no
+  
+  const onAdd = (count) => {
+    setPurchaseCompleted(true)
+    addToCart(props.item, count)
+  }
 
   return (
     <div className="detail-container">
@@ -35,12 +38,21 @@ const ItemDetail = (props) => {
           <div className="descripcion-container">
             <p> {description} </p>
             <p> {talle} </p>
-            <p> {price} </p>
+            <p className='p'> {price} </p>
           </div>
           <div className="Itemcount-container">
             {/* {count ? <strong>verdadero</strong> : <strong>falso</strong>}
     { count && <strong> Se renderea </strong>} */}
-            <ItemCount className="itemcount" onAdd={onAdd} />
+
+                {purchaseCompleted ? (
+                   <Link 
+                   to='/items' className='addCarrito' >
+                      Terminar Compra
+                   </Link>
+                ): <ItemCount className="itemcount" onAdd={onAdd}/>  
+              }    
+              
+            
           </div>
         </div>
       </div>

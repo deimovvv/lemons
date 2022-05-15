@@ -1,5 +1,6 @@
 import { counter } from "@fortawesome/fontawesome-svg-core";
-import { useEffect, useState } from "react";
+import { useContext,useEffect, useState } from "react";
+import { CartContext } from "../context/CartContext";
 import "./Count.css";
 
 const ItemCount = ({onAdd}) => {
@@ -8,6 +9,7 @@ const ItemCount = ({onAdd}) => {
   const initial = 1
   const stock = 5
   const [count, setCount] = useState(initial);
+
 
 
   useEffect(() => {
@@ -27,9 +29,10 @@ const ItemCount = ({onAdd}) => {
     if (count > 1) setCount(count - 1);
   };
 
-  const addToCart = () => {
-    onAdd(count)
+  /* const handleClick = (id, quantity) => {
+    const findProduct = products.find()
   }
+ */
 
   return (
     <>
@@ -46,7 +49,11 @@ const ItemCount = ({onAdd}) => {
           +{" "}
         </button>
         </div>
-        <button className='addCarrito' onClick={addToCart}> Agregar al carrito </button>
+        
+        
+        <button className='addCarrito' onClick={() => onAdd(count) }> Agregar al carrito </button>
+        
+
       </div>
     </>
   );
