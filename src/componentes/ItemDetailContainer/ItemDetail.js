@@ -46,7 +46,7 @@ const ItemDetail = (props) => {
 
                 {purchaseCompleted ? (
                    <Link 
-                   to='/items' className='addCarrito' >
+                   to='/cart' className='addCarrito' >
                       Terminar Compra
                    </Link>
                 ): <ItemCount className="itemcount" onAdd={onAdd}/>  

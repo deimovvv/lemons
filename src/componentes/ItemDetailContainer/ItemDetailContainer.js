@@ -4,17 +4,23 @@ import { arrayProductos } from '../arrayproductos/data.js'
 import ItemDetail from './ItemDetail'
 import './ItemDetailContainer.css'
 import { useParams } from 'react-router-dom';
+import ReactLoading from 'react-loading';
 
 const ItemDetailContainer = () => {
 
     const [detail, setDetail] = useState([])
+
+    const [loading, setLoading] = useState(true)
 
     const { itemId } = useParams()
 
 
     useEffect(() => {
         getDetailPromise      
-        .then(data => setDetail(data)) 
+        .then(data =>  {
+          setDetail(data)
+          setLoading(false)
+        } ) 
         .catch(err =>   console.log(err) )
         
     },[])
@@ -30,12 +36,17 @@ const ItemDetailContainer = () => {
 
   return (
      
+     
+
     
-    <div className='itemdetail-container'>
+    <div >
+      { loading ? <ReactLoading color='red' type='spin'/> :
+       <div className='itemdetail-container'>
     <ItemDetail   /* paso los detalles como props a ItemDetail */ item={detail} />  
-    
     </div>
-    
+       }
+    </div>
+  
     
   )
 }

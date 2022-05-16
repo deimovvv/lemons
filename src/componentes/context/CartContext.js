@@ -56,7 +56,7 @@ export const CartProvider = ({ defaultValue = [], children }) => {
 
 
        const removeFromCart = (id) => {
-           const newCart = [...cart].map(element => element.id !== id) // crea un array que excluye al elemento con el id que le paso la funcion
+           const newCart = [...cart].map(element => element.item.id !== id) // crea un array que excluye al elemento con el id que le paso la funcion
            setCart(newCart)
        }
 

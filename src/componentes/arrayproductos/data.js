@@ -57,6 +57,6 @@ export const arrayProductos = [
         talle: 'Talle: 3',
         category: 'verano',
         id: 6
-    },
+    }
     
 ];

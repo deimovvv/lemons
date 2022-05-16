@@ -6,6 +6,8 @@ import ItemDetailContainer from "./componentes/ItemDetailContainer/ItemDetailCon
 import LandingPage from './componentes/LandingPage/LandingPage.js'
 import {CartProvider} from './componentes/context/CartContext'
 import Footer from "./componentes/footer/Footer";
+import ProductDetail from "./componentes/firebase/ProductDetail";
+import CartView from "./componentes/CartView.js/CartView";
 
 
 
@@ -23,10 +25,12 @@ function App() {
           <Route path='/items' element={<ItemListContainer />}   />
           <Route path='/item/:itemId' element={<ItemDetailContainer />} / >  
           <Route path='/category/:id' element={<ItemListContainer />} / >  
+          <Route path='/cart' element={<CartView />} / > 
+          <Route path='/producto' element={<ProductDetail />} / > 
           
             
          {/*  </div> */}
-           
+         
           
         </Routes>
         <Footer/>
