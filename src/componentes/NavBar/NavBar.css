@@ -18,9 +18,23 @@
     
 }
 
+.container-all{
+    height: 40px;
+    padding: auto;
+    background-color: #75245E;
+}
+
+.container-all h1 {
+    
+    text-align: center;
+    color: white;
+}
+
 .nav-brand{
+    
     /* margin-left: 10px; */
-    height: 50px;
+    padding: 10px 0;
+    height: 80px;
     cursor: pointer;
 }
 
@@ -31,21 +45,25 @@
     justify-content: space-between;
     /* border: 2px solid black; */
     align-items: center;
-    padding: 20px 20px;
+    padding: 10px 20px;
     width: 100%;
-    height: 140px;
+    height: 100px;
     background-color: #E3E7ED;
-    border: .5px solid black;
+    border: 1px solid #75245E;
     
     
    
 
 }
 
-
+.nav__link{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+}
 
 .nav__items {
-    display: inline;
+    
     padding: 0px 30px;
     
 }
@@ -68,5 +86,7 @@
 
 
 
-
+.fa-cart-shopping{
+    color: black;
+}
 

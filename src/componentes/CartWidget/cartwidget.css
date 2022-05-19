@@ -1,0 +1,28 @@
+* {
+    text-decoration: none;
+   
+}
+
+
+.icon{
+    height: 30px;
+    width: 30px;
+    
+    
+}
+.cantidad{
+    text-decoration: none !important;
+    padding: 5px;
+    color: white;
+}
+
+.widget-container{
+    background-color: #75245E;
+    display: flex;
+    justify-content: center;
+    padding: 5px;
+    width: 100px;
+    height: 40px;
+      border: 1px solid #75245E;
+      border-radius: 20px;
+}

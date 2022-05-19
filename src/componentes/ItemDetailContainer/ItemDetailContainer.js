@@ -39,8 +39,8 @@ const ItemDetailContainer = () => {
      
 
     
-    <div >
-      { loading ? <ReactLoading color='red' type='spin'/> :
+    <div className='todo-container'>
+      { loading ? <ReactLoading className='loading' color='#75245E' type='spin'/> :
        <div className='itemdetail-container'>
     <ItemDetail   /* paso los detalles como props a ItemDetail */ item={detail} />  
     </div>

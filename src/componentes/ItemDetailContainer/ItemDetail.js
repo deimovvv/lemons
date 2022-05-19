@@ -20,7 +20,7 @@ const ItemDetail = (props) => {
  
   const [purchaseCompleted, setPurchaseCompleted] = useState(false) // estado que indica si el usuario hizo la compra o no
   
-  const onAdd = (count) => {
+  const onAdd = (count) => {  // recibe la cantidad que esta en itemcount y se la pasa a la funcion de addTocart
     setPurchaseCompleted(true)
     addToCart(props.item, count)
   }
@@ -47,7 +47,7 @@ const ItemDetail = (props) => {
                 {purchaseCompleted ? (
                    <Link 
                    to='/cart' className='addCarrito' >
-                      Terminar Compra
+                      Ir a mi carrito
                    </Link>
                 ): <ItemCount className="itemcount" onAdd={onAdd}/>  
               }    

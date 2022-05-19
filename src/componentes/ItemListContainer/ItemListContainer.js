@@ -4,6 +4,7 @@ import "../ItemListContainer/ItemListContainer.css";
 import { arrayProductos } from "../arrayproductos/data.js";
 import ItemList from "../ItemList/ItemList.js";
 import { useParams } from "react-router";
+import ReactLoading from 'react-loading';
 
 // contenedor de catalogo, recibe datos que van a renderizar los componentes hijos y se los pasa como props
 const ItemListContainer = () => {
@@ -22,7 +23,7 @@ const ItemListContainer = () => {
     // con array vacio para que se ejecute en onMount
   }, [id]);
 
-  
+  const [loading, setLoading] = useState(true)
 
   const getsProductsPromise = new Promise((res, rej) => {
     setTimeout(() => {
@@ -37,11 +38,15 @@ const ItemListContainer = () => {
 
   return (
     <>
+    <div 
+    >  
       <div className="container">
+        
         <h1 style={{ textAlign: "center" }}> PRODUCTOS DESTACADOS </h1>
         <ItemList // pasamos los productos como props a ItemList
           items={productos}
         />
+      </div>
       </div>
     </>
   );

@@ -12,8 +12,8 @@
     width: 100%; */
     margin: 0px;
     padding: 40px;
-    background-color: #75245E;
-    
+    background-color: #E3E7ED;
+    height: 1300px;
      /* background-image: url(../../assets/tejidoniño.jpeg); */
      min-width: 100vw;
    
@@ -25,7 +25,7 @@
     font-size: 30px;
     font-weight: 200;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    color: white;
+    color: #75245E;
     
 
 }

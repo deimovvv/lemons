@@ -56,8 +56,8 @@ export const CartProvider = ({ defaultValue = [], children }) => {
 
 
        const removeFromCart = (id) => {
-           const newCart = [...cart].map(element => element.item.id !== id) // crea un array que excluye al elemento con el id que le paso la funcion
-           setCart(newCart)
+           const newCart = [...cart].filter(element => element.item.id !== id) // crea un array que excluye al elemento con el id que le paso la funcion
+           setCart(newCart)   // filter va a borrar todos los elementos que tenga el id que reciba la funcion
        }
 
        
@@ -71,11 +71,28 @@ export const CartProvider = ({ defaultValue = [], children }) => {
     }
     // creo una variable que le voy a pasar a value como context con objetos y el estado, tambien el carrito del useState
 
+    // funcion que me diga cuantos productos hay en el carrito
+    const getQuantity = () => {
+        let cantidad = 0
+        cart.forEach((element) => cantidad = cantidad + element.quantity)
+        return cantidad
+    }
+    
+    const getTotal = () => {
+        let total = 0
+        cart.forEach((element) => {
+            total = total + (element.quantity * element.item.price)
+        })
+        return total
+    }
+ 
      const context = {
             cart, //lista   
             addToCart, // funcion para agregar elementos a la lista
             clearCart, // limpiamos lista de favoritos
-            removeFromCart
+            removeFromCart,
+            getQuantity,
+            getTotal
         } 
 
   return (

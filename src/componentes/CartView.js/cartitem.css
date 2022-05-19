@@ -1,11 +1,28 @@
 .cart-item-container{
     height: 150px;
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
+    background-color: #75245E;
+    color: white;
 }
 
 
 .cart-item-container img{
     height: 100px;
     width: 100px;
+}
+
+
+.cart-item-container button{
+    width: 130px;
+    height: 80px;
+}
+
+.cart-container{
+    height: 200px;
+    display: flex;
+    padding: 200px;
+    flex-direction: row;
+    justify-content: space-around;
+   
 }
