@@ -5,6 +5,7 @@ import ItemDetail from './ItemDetail'
 import './ItemDetailContainer.css'
 import { useParams } from 'react-router-dom';
 import ReactLoading from 'react-loading';
+import {doc, getDoc, getFirestore} from 'firebase/firestore';
 
 const ItemDetailContainer = () => {
 
@@ -14,24 +15,21 @@ const ItemDetailContainer = () => {
 
     const { itemId } = useParams()
 
+    const db = getFirestore()
+    const referenciaItems = doc(db, 'items', itemId)
 
     useEffect(() => {
-        getDetailPromise      
+        getDoc(referenciaItems)  
         .then(data =>  {
-          setDetail(data)
+          setDetail({id: data.id, ...data.data()})
           setLoading(false)
         } ) 
         .catch(err =>   console.log(err) )
         
     },[])
 
-    const getDetailPromise = new Promise((res,rej) => {
-        setTimeout(() => {
-          const productoFiltrado = arrayProductos.find(e => e.id == itemId)
-          res(productoFiltrado)
-        }, (2000));
-    })
-  
+
+   
 
 
   return (

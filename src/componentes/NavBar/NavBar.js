@@ -45,9 +45,9 @@ const NavBar = () => {
             <Link to={"/category/primavera"}> Primavera</Link>
           </li>
 
-          <CartWidget />
+          
         </ul>
-
+        <CartWidget />
         <div className="dropdown dropdown-end">
           <label tabindex="0" className="btn btn-ghost btn-circle">
             <div className="indicator"></div>
