@@ -20,39 +20,34 @@ const NavBar = () => {
       </div> */}
 
         <header>
-          <img src={Logo} className="nav-brand" />
+      {/*     <img src={Logo} className="nav-brand" /> */}
+          <h1   className="nav-brand1"> Le Mons </h1>
         </header>
 
         {/* links de navegación */}
         <ul className="nav__link nav__link--menu">
           <li className="nav__items">
-            <Link to={"/"}> Inicio</Link>
+            <Link to={"/"}> INICIO</Link>
           </li>
           <li className="nav__items">
-            <Link to={"/items"}> Catalogo</Link>
+            <Link to={"/items"}> CATALOGO</Link>
           </li>
           <li className="nav__items">
-            <Link to={"/category/otoño"}>Otoño</Link>
+            <Link to={"/category/otoño"}>OTOÑO</Link>
           </li>
           <li className="nav__items">
-            <Link to={"/category/verano"}>Verano</Link>
+            <Link to={"/category/verano"}>VERANO</Link>
           </li>
           <li className="nav__items">
-            <Link to={"/category/invierno"}> Invierno</Link>
+            <Link to={"/category/invierno"}> INVIERNO</Link>
           </li>
 
           <li className="nav__items">
-            <Link to={"/category/primavera"}> Primavera</Link>
+            <Link to={"/category/primavera"}> PRIMAVERA</Link>
           </li>
-
-          
         </ul>
-        <CartWidget />
-        <div className="dropdown dropdown-end">
-          <label tabindex="0" className="btn btn-ghost btn-circle">
-            <div className="indicator"></div>
-          </label>
-        </div>
+        <CartWidget  />
+     
       </div>
     </>
   );

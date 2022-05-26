@@ -1,9 +1,6 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-
-import App from './App';
-
-
+import React from "react";
+import ReactDOM from "react-dom/client";
+import App from "./App";
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
 
@@ -14,18 +11,16 @@ const firebaseConfig = {
   storageBucket: "le-mons.appspot.com",
   messagingSenderId: "168198936199",
   appId: "1:168198936199:web:77d1698e7088e5d4abca22",
-  measurementId: "G-0RR77VXF8S"
+  measurementId: "G-0RR77VXF8S",
 };
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
 
-
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <App />
   </React.StrictMode>
 );
-

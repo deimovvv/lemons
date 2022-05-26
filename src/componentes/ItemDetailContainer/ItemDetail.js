@@ -1,29 +1,34 @@
 import { useContext, useState } from "react";
+
 import ItemCount from "../ItemCount/ItemCount";
 import { arrayProductos } from "../arrayproductos/data.js";
 import "./ItemDetail.css";
 import { CartContext } from "../context/CartContext";
-import { Link } from 'react-router-dom'
-/* import { useParams } from 'react-router-dom'; */
+import { Link } from "react-router-dom";
+import { ToastContainer , toast } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
 
 
 const ItemDetail = (props) => {
   const { name, id, description, talle, price, img } = props.item;
 
+  
+
+  window.scrollTo(0,0)
+
   // useContext es un hook react para traer contexto
   const { addToCart } = useContext(CartContext);
 
-  
+  const [purchaseCompleted, setPurchaseCompleted] = useState(false); // estado que indica si el usuario hizo la compra o no
 
+  const onAdd = (count) => {
+    // recibe la cantidad que esta en itemcount y se la pasa a la funcion de addTocart
+    setPurchaseCompleted(true);
+    addToCart(props.item, count);
     
+   /* X<   */
 
- 
-  const [purchaseCompleted, setPurchaseCompleted] = useState(false) // estado que indica si el usuario hizo la compra o no
-  
-  const onAdd = (count) => {  // recibe la cantidad que esta en itemcount y se la pasa a la funcion de addTocart
-    setPurchaseCompleted(true)
-    addToCart(props.item, count)
-  }
+  };
 
   return (
     <div className="detail-container">
@@ -36,26 +41,31 @@ const ItemDetail = (props) => {
           <h1> {name} </h1>
 
           <div className="descripcion-container">
-            <p> {description} </p>
-            <p> {talle} </p>
-            <p className='p'> {price} </p>
+              <p className='description'> {description} </p>
+          {/*   <p>  Mongomeri tejido hecho con lana orgánica, <br/>
+                Con bolsillos y capucha <br/>
+                 Color: Gris oscuro  <br/>
+              </p> */}
+            
+            <p className="p">   $ {price}</p> 
+            <span className='talle'> {talle} </span>
+          
           </div>
           <div className="Itemcount-container">
             {/* {count ? <strong>verdadero</strong> : <strong>falso</strong>}
     { count && <strong> Se renderea </strong>} */}
 
-                {purchaseCompleted ? (
-                   <Link 
-                   to='/cart' className='addCarrito' >
-                      Ir a mi carrito
-                   </Link>
-                ): <ItemCount className="itemcount" onAdd={onAdd}/>  
-              }    
-              
-            
+            {purchaseCompleted ? (
+              <Link to="/cart" className="addCarrito">
+                Ir a mi carrito
+              </Link>
+            ) : (
+              <ItemCount className="itemcount" onAdd={onAdd} />
+            )}
           </div>
         </div>
       </div>
+      <ToastContainer/>
     </div>
   );
 };

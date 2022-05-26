@@ -1,0 +1,11 @@
+.all-container{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: .5px solid black;
+    height: 200px;
+    width: 600px;
+    margin: auto;
+}

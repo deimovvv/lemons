@@ -1,17 +1,15 @@
-.loading{
-    padding-top: 200px;
-    text-align: center;
-    width: 200px;
-    margin: 0 auto;
-    
+.loading {
+  padding-top: 200px;
+  text-align: center;
+  width: 200px;
+  margin: 0 auto;
 }
 
-.todo-container{
-    margin: 0px;
-    
-    background-color: #E3E7ED;
-    height: 600px;
-     /* background-image: url(../../assets/tejidoniño.jpeg); */
-     min-width: 100vw;
+.todo-container {
+  margin: 0px;
 
+  background-color: #e3e7ed;
+  height: 100vh;
+  /* background-image: url(../../assets/tejidoniño.jpeg); */
+  min-width: 100vw;
 }

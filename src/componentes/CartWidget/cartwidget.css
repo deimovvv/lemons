@@ -7,8 +7,10 @@
 .icon{
     height: 30px;
     width: 30px;
+    padding: 5px;
+  
     
-    
+        
 }
 .cantidad{
     text-decoration: none !important;
@@ -17,13 +19,17 @@
 }
 
 .widget-container{
-    background-color: #75245E;
+    background-color: #71869d;
     display: flex;
     justify-content: center;
     
     padding: 5px;
-    width: 100px;
+    width: 90px;
     height: 40px;
-      border: 1px solid #75245E;
-      border-radius: 20px;
+      border: .5px solid #742475;
+      border-radius: 15px;
+}
+
+.cartwidget{
+    padding: 0px;
 }

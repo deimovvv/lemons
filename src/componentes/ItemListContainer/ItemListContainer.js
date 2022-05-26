@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+
 import ItemCount from "../ItemCount/ItemCount.js";
 import "../ItemListContainer/ItemListContainer.css";
 import { arrayProductos } from "../arrayproductos/data.js";
@@ -17,63 +18,67 @@ import { faTheRedYeti } from "@fortawesome/free-brands-svg-icons";
 // contenedor de catalogo, recibe datos que van a renderizar los componentes hijos y se los pasa como props
 const ItemListContainer = () => {
 
-
+  
   // se crea instancia de base de datos de firebase
-  const db = getFirestore()
+  const db = getFirestore();
   // accedo a la coleccion de productos de firebase
-  const itemsCollection = collection(db, 'items')
+  const itemsCollection = collection(db, "items");
 
   const { id } = useParams();
 
   // useState para introducir en el estado productos, lo que consuma del arrayProductos
   const [productos, setProductos] = useState([]);
+  const [loading, setLoading] = useState(true);
   // creo el variable con clase promise con un setTimeout de 2 segundos que devuelve array de productos en el parametro resolve
 
-
   useEffect(() => {
-    if(id) {
-      const queryFiltrado = query(itemsCollection, where('category', '==', id))
-      getDocs(queryFiltrado)
-      .then((data) => {   
-        setProductos(data.docs.map((document) => ({id: document.id, ...document.data()}) ))
-      })
-      setLoading(false)
+    if (id) {
+      const queryFiltrado = query(itemsCollection, where("category", "==", id));
+      getDocs(queryFiltrado).then((data) => {
+        setProductos(
+          data.docs.map((document) => ({ id: document.id, ...document.data() }))
+        );
+      });
+      setLoading(false);
     } else {
-
-    getDocs(itemsCollection)
-    .then((data) => {   
-      setProductos(data.docs.map((document) => ({id: document.id, ...document.data()}) ))
-    })
-    setLoading(false)
+      getDocs(itemsCollection) // invoca el llamado
+        .then((data) => {
+          setProductos(
+            data.docs.map((document) => ({
+              id: document.id,
+              ...document.data(),
+            }))
+          );
+          setLoading(false)
+        });
     }
   }, [id]);
+
   
 
-  const [loading, setLoading] = useState(true);
-
-  const getsProductsPromise = new Promise((res, rej) => {
-    
-  });
+  const getsProductsPromise = new Promise((res, rej) => {});
 
   return (
     <>
-      <div>
+     
         <div className="container">
-          <h1 style={{ textAlign: "center" }}> PRODUCTOS DESTACADOS </h1>
-          <ItemList // pasamos los productos como props a ItemList
-            items={productos}
-          />
+          {loading ? (
+            <ReactLoading className="loading" color="#586f61" type="spin" />
+          ) : (
+            <div className="container1">
+              <h1 style={{ textAlign: "center" }}> PRODUCTOS DESTACADOS </h1>
+              <ItemList // pasamos los productos como props a ItemList
+                items={productos}
+              />
+            </div>
+          )}
         </div>
-      </div>
+      
     </>
   );
 };
 
 export default ItemListContainer;
-
-
-
-
 
 /* getsProductsPromise // en setProductos pasamos la data del array al state despues que se resuelve la promesa
       .then((arrayp) => setProductos(arrayp)) // en arrayp obtenemos la respuesta de lo que ingresamos en el res, y lo que ingresamos en res es el arrayProductos
