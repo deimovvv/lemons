@@ -19,7 +19,7 @@ const Item = ({ producto }) => {
           </Link>{" "}
        
         {/* <h3> {producto.stock}</h3> */}
-        <div className={ItemCount}></div>
+        <div></div>
       </div>
     </div>
   );

@@ -13,11 +13,10 @@ import Swal from "sweetalert2";
 import { success } from "daisyui/src/colors";
 
 const Order = ({ order, getTotal }) => {
+  const db = getFirestore();
+  const collectionReference = collection(db, "orders");
 
-  const db = getFirestore()
-  const collectionReference = collection(db, 'orders')
-
-      // fecha de pedido
+  // fecha de pedido
   const date = new Date().toLocaleString + "";
   const orderList = {
     buyer: {
@@ -37,34 +36,34 @@ const Order = ({ order, getTotal }) => {
   };
 
   const handleCheckout = () => {
-
-      addDoc(collectionReference, orderList)
-      .then((response) => { 
-        console.log(response);
-        Swal.fire({
-          icon: 'success',
-          title: "Tu orden fue confirmada",
-          text: `Va a llegar a tu domicilio en 24 horas             -         El ID de tu orden es: ` + response.id,
-        });
-      })
-
-   
+    addDoc(collectionReference, orderList).then((response) => {
+      console.log(response);
+      Swal.fire({
+        icon: "success",
+        title: "Tu orden fue confirmada",
+        text:
+          `Va a llegar a tu domicilio en 24 horas             -         El ID de tu orden es: ` +
+          response.id,
+      });
+    });
   };
 
   return (
-    <div className='all-container'>
-      <h2> ¿ Confirmar Compra ? </h2>
+    <div className="all-container">
+      <h2> ¿Confirmar Compra? </h2>
 
       {order.map((element) => (
-        <div className="order-item-container">
-          <span> {element.item.name} </span>
-          <span> {element.item.price} </span>
-
-
-
+        <div className="order-item-container" key={element.item.id}>
+          <span> {element.item.name} </span> 
+          -
+          <span> ${element.item.price} </span>
+          <br/> 
           <span> Cantidad: {element.quantity} </span>
+          <hr></hr>
         </div>
       ))}
+
+      <h4> Total de la compra: ${getTotal()} </h4>
 
       <button onClick={handleCheckout}> Confirmar </button>
     </div>

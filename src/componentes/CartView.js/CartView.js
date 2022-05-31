@@ -26,7 +26,7 @@ const CartView = () => {
         {showOrder ? (
           <div className="view-container">
             {cart.map((e) => (
-              <div className="cart-item-container">
+              <div className="cart-item-container" key={e.item.id}>
                 <img src={e.item.img} />
                 <span> {e.item.name} </span>
                 <span> ${e.item.price} </span>

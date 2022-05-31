@@ -10,8 +10,8 @@ const ItemList = ({items}) => {
       {items.map((itm) => {
         // rendereo array de componentes item para cada uno de los elementos que llamamos itm
         return (
-          <div className="card-container1">
-            <Item producto={itm} key={itm.id + 1} />
+          <div className="card-container1" key={itm.id}>
+            <Item producto={itm}  />
           </div>
         );
       })}

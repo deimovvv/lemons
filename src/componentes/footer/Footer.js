@@ -11,10 +11,10 @@ const Footer = () => {
             <h1>Sobre nosotros</h1>
           </ul>
           <ul>
-            <h1> Ubicacion</h1>
-            <p>Norberto de la riestra</p>
+            <h1>Norberto de la riestra</h1>
           </ul>
           <ul>
+
             <h1>Contacto</h1>
           </ul>
         </div>
