@@ -16,6 +16,8 @@ const Order = ({ order, getTotal }) => {
   const db = getFirestore();
   const collectionReference = collection(db, "orders");
 
+  window.scrollTo(0,0)
+
   // fecha de pedido
   const date = new Date().toLocaleString + "";
   const orderList = {
@@ -42,7 +44,7 @@ const Order = ({ order, getTotal }) => {
         icon: "success",
         title: "Tu orden fue confirmada",
         text:
-          `Va a llegar a tu domicilio en 24 horas             -         El ID de tu orden es: ` +
+          `Va a llegar a tu domicilio en 24 horas  -  El ID de tu orden es: ` +
           response.id,
       });
     });
@@ -54,7 +56,7 @@ const Order = ({ order, getTotal }) => {
 
       {order.map((element) => (
         <div className="order-item-container" key={element.item.id}>
-          <span> {element.item.name} </span> 
+          <p> {element.item.name} </p> 
           -
           <span> ${element.item.price} </span>
           <br/> 

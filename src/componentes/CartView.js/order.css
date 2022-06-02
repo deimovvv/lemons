@@ -5,20 +5,26 @@
     align-items: center;
     flex-direction: column;
     border: .5px solid black;
-    height: 60vh;
+    height: 80vh;
     width: 600px;
     margin: auto;
     
 }
 
+.order-item-container p{
+    color: #71869d;
+  margin: 20px 0px;
+}
+
 .all-container h2{
   padding: 20px;
   font-size: 30px;
-  font-weight: 600;
+  font-weight: 300;
 }
 
 .all-container h4 {
     margin: 10px;
+    font-weight: bold;
 }
 
 

@@ -47,8 +47,9 @@ const ItemDetail = (props) => {
                  Color: Gris oscuro  <br/>
               </p> */}
             
-            <p className="p">   $ {price}</p> 
-            <span className='talle'> {talle} </span>
+          
+            <p className='talle'> - {talle} </p>
+            <p className="p">  -  $ {price}</p> 
           
           </div>
           <div className="Itemcount-container">
