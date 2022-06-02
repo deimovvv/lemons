@@ -41,9 +41,7 @@ La base del proyecto es un ecommerce de tejidos para niños, que lo disfrutes!
 * **Tutor:** Andres Pujol
 
 
-* **Repositorio proyecto final:** 
-
-* **Puedes ver el Proyecto en Vercel:** 
+* **Puedes ver el Proyecto en Vercel:  https://lemons-gamma.vercel.app/ ** 
 
 
 ### Frontend
